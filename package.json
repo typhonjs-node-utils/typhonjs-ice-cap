@@ -29,9 +29,10 @@
   },
   "keywords": [
     "typhonjs",
-    "ansi",
-    "color",
-    "logger"
+    "programmable",
+    "html",
+    "templating",
+    "cheerio"
   ],
   "files": [
     "dist",

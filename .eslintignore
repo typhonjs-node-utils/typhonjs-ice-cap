@@ -1,0 +1,24 @@
+coverage/
+dist/
+docs/
+node_modules/
+
+src/common/publisher/template
+
+test/fixture/dest
+
+test/fixture/package/src/Invalid/CodeSyntax.js
+test/fixture/syntax/DynamicImport.js
+
+// Requires babel-eslint
+test/fixture/package/src/ClassProperty/Definition.js
+test/fixture/package/src/Decorator/Definition.js
+test/fixture/package/src/Guess/Param.js
+test/fixture/package/src/Guess/Return.js
+test/fixture/package/src/Type/Spread.js
+test/fixture/syntax/AsyncGenerators.js
+test/fixture/syntax/DoExpressions.js
+test/fixture/syntax/DynamicImport.js
+test/fixture/syntax/ExportExtensions.js
+test/fixture/syntax/FunctionBind.js
+test/fixture/syntax/FunctionSent.js

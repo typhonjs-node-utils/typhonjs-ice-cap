@@ -1,0 +1,45 @@
+{
+  "name": "typhonjs-ice-cap",
+  "version": "0.0.1",
+  "description": "Programmable DOM-based HTML template library.",
+  "author": "typhonrt",
+  "homepage": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-doc/tjsdoc"
+  },
+  "scripts": {
+    "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
+    "esdoc": "esdoc -c .esdocrc",
+    "eslint": "eslint .",
+    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
+    "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js",
+    "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0"
+  },
+  "devDependencies": {
+    "backbone-esnext-eventbus": "<=1.0.0",
+    "typhonjs-color-logger": "<=0.1.0",
+    "typhonjs-config-eslint": "^0.4.0",
+    "typhonjs-npm-build-test": "^0.4.0",
+    "typhonjs-plugin-manager": "<=1.0.0"
+  },
+  "keywords": [
+    "typhonjs",
+    "ansi",
+    "color",
+    "logger"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "AUTHORS.md"
+  ],
+  "main": "dist/ColorLogger.js",
+  "bugs": {
+    "url": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap"
+  }
+}

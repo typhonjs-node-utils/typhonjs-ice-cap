@@ -39,7 +39,7 @@
     "src",
     "AUTHORS.md"
   ],
-  "main": "dist/ColorLogger.js",
+  "main": "dist/IceCap.js",
   "bugs": {
     "url": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap"
   }

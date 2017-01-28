@@ -1,7 +1,7 @@
 import cheerio from 'cheerio';
 
 /**
- * IceCap process HTML template with programmable.
+ * IceCap provides programmable HTML templating with `cheerio`.
  *
  * @example
  * import IceCap from 'typhonjs-ice-cap';

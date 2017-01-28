@@ -31,13 +31,11 @@ export default class IceCap
     *
     * @param {!string}     html -
     *
-    * @param {boolean}     autoClose -
-    *
-    * @param {boolean}     autoDrop -
+    * @param {{ autoClose: boolean, autoDrop: boolean}} options -
     *
     * @param {EventProxy}  eventbus -
     */
-   constructor(html, { autoClose = true, autoDrop = true } = { autoClose: true, autoDrop: true }, eventbus = void 0)
+   constructor(html, options = { autoClose: true, autoDrop: true }, eventbus = void 0)
    {
       if (!html)
       {
@@ -53,7 +51,7 @@ export default class IceCap
          this._$root = html;
       }
 
-      this._options = { autoClose, autoDrop };
+      this._options = options;
 
       this._eventbus = eventbus;
    }

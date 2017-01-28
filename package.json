@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-ice-cap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Programmable DOM-based HTML template library.",
   "author": "typhonrt",
   "homepage": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap",

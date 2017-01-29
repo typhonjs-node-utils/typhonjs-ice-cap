@@ -1,13 +1,13 @@
 {
   "name": "typhonjs-ice-cap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Programmable DOM-based HTML template library.",
   "author": "typhonrt",
   "homepage": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typhonjs-doc/tjsdoc"
+    "url": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",

@@ -3,12 +3,37 @@ import cheerio from 'cheerio';
 /**
  * IceCap provides programmable HTML templating with `cheerio`.
  *
+ * In addition to the default export of IceCap integration with `typhonjs-plugin-manager` is also available and
+ * when loaded as a plugin two event bindings are exposed to create an IceCap instance and to set global debugging.
+ * Debug logging is only enabled when IceCap is used as a plugin as the debug log message `log:debug` is triggered and
+ * a logger such as `typhonjs-color-logger` must also be loaded as a plugin.
+ *
  * @example
  * import IceCap from 'typhonjs-ice-cap';
  *
  * const ice = new IceCap('<p data-ice="name"></p>');
  * ice.text('name', 'Alice');
  * console.log(ice.html); // <p data-ice="name">Alice</p>
+ *
+ * @example
+ * import PluginManager    from 'typhonjs-plugin-manager';
+ * import eventbus         from 'backbone-esnext-eventbus';
+ *
+ * const pluginManager = new PluginManager({ eventbus });
+ *
+ * // This will automatically wire up typhonjs-color-logger to the eventbus.
+ * pluginManager.add({ name: 'typhonjs-ice-cap' });
+ *
+ * // Load `typhonjs-color-logger` for debug logging support if desired.
+ * pluginManager.add({ name: 'typhonjs-color-logger' });
+ *
+ * // simple usage
+ * const ice = eventbus.triggerSync('ice:cap:create', '<p data-ice="name"></p>');
+ * ice.text('name', 'Alice');
+ * console.log(ice.html); // <p data-ice="name">Alice</p>
+ *
+ * @see https://www.npmjs.com/package/typhonjs-plugin-manager
+ * @see https://www.npmjs.com/package/typhonjs-color-logger
  */
 export default class IceCap
 {
@@ -426,7 +451,7 @@ export default class IceCap
 }
 
 /**
- * Wires up Logger on the plugin eventbus.
+ * Wires up IceCap on the plugin eventbus.
  *
  * @param {PluginEvent} ev - The plugin event.
  *

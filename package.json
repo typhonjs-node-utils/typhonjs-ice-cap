@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-ice-cap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Programmable DOM-based HTML template library.",
   "author": "typhonrt",
   "homepage": "https://github.com/typhonjs-node-utils/typhonjs-ice-cap",
@@ -18,6 +18,7 @@
     "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js"
   },
   "dependencies": {
+    "babel-runtime": "^6.0.0",
     "cheerio": "^0.22.0"
   },
   "devDependencies": {

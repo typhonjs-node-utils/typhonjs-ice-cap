@@ -49,6 +49,8 @@ export default class IceCap
 
    static get CALLBACK_LOAD() { return 'html'; }
 
+   static get debug() { return this._debug; }
+
    static set debug(v) { this._debug = v; }
 
    /**
@@ -463,7 +465,7 @@ export function onPluginLoad(ev)
 {
    const eventbus = ev.eventbus;
 
-   let eventPrepend = '';
+   let eventPrepend = 'typhonjs';
 
    const options = ev.pluginOptions;
 
@@ -474,11 +476,13 @@ export function onPluginLoad(ev)
       if (typeof options.eventPrepend === 'string') { eventPrepend = `${options.eventPrepend}:`; }
    }
 
-   eventbus.on(`${eventPrepend}ice:cap:create`, (html, options = { autoClose: true, autoDrop: true },
+   eventbus.on(`${eventPrepend}:ice:cap:create`, (html, options = { autoClose: true, autoDrop: true },
     targetEventbus = eventbus) =>
    {
       return new IceCap(html, options, targetEventbus);
    });
 
-   eventbus.on(`${eventPrepend}ice:cap:set:debug`, (debug) => { IceCap.debug = debug; });
+   eventbus.on(`${eventPrepend}:ice:cap:debug:get`, () => IceCap.debug);
+
+   eventbus.on(`${eventPrepend}:ice:cap:debug:set`, (debug) => { IceCap.debug = debug; });
 }
